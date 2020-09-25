@@ -17,11 +17,11 @@ from bs4 import BeautifulSoup
 
 from bs4 import BeautifulSoup
 from selenium import webdriver
-driver = webdriver.Firefox("C:/Users/jacka/geckodriver-v0.27.0-win64/geckodriver.exe")
+driver = webdriver.Firefox(executable_path="C:\\Users\\jacka\\geckodriver-v0.27.0-win64\\geckodriver.exe")
 driver.get('https://moneypip.com/inx-live-charts/')
 
-html = driver.page_source
-soup = BeautifulSoup(html)
+soup = BeautifulSoup(driver.page_source, features="lxml")
 
-for tag in soup.find_all("span", class_="changePercent "):
+# for tag in soup.find_all("span", {"class": "changePercent"}):
+for tag in soup.find_all("span"):
     print(tag.text)
