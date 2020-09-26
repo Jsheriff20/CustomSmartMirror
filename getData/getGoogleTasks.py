@@ -60,7 +60,7 @@ def convert_to_RFC_datetime(year=1900, month=1, day=1, hour=0, minute=0):
 # if the id = "subTask" then it means that the previous task (that's ID was not "subTask") is the parent
 def getTaskList():
     #get info and create the service
-    CLIENT_SECRET_FILE = "client_secret_file.json"
+    CLIENT_SECRET_FILE = "../../client_secret_file.json"
     API_NAME = "tasks"
     API_VERSION = "v1"
     SCOPES = ["https://www.googleapis.com/auth/tasks"]

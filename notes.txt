@@ -1,0 +1,3 @@
+cmd line to convert qt design into py code:
+pyuic5 -x qtDesignerFile.ui -o newNameForThePythonCodeFile.py
+pyuic5 -x test.ui -o test.py
